@@ -1,0 +1,35 @@
+--注册证表
+create table TR_RegistCert
+(
+	int_ID int identity(1,1) primary key,
+	RcKey nvarchar(36),
+	RcName nvarchar(50), --注册证编号
+	ManagementCatelogy nvarchar(20), --管理分类
+	BeginDate date, --开始时间 
+	EndDate date,--截止时间 
+	RegisterName nvarchar(50), --注册证名称
+	RegisterAddress nvarchar(300),--注册证地址 
+	ProductName nvarchar(100),--对应产品名称
+	V68Catelogy nvarchar(20),--68分类类目
+	V2017Catelogy nvarchar(20), --2017分类类目
+	ProductNumber int, --产品数量
+	CountyCode nvarchar(20),--归属国家区域代码
+	Propery01 nvarchar(200),--代理人
+	Propery02 nvarchar(200),--代理地址
+	Propery03 nvarchar(50),
+	Propery04 nvarchar(50),
+	Propery05 nvarchar(50),
+	Propery06 nvarchar(50),
+	Propery07 nvarchar(50),
+	BookTime datetime
+
+)
+--注册证产品规格表
+create table TR_RegistCert_Spec 
+(
+	int_ID int identity(1,1),
+	RcKey nvarchar(36),
+	Spec nvarchar(50), --规格
+	Model nvarchar(50), --型号
+	UDDICode nvarchar(50) --高值主码
+)

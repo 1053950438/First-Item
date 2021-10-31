@@ -1,0 +1,13 @@
+TR_MedicalDeviceManagementPermit_FJ 福建
+TR_MedicalDeviceManagementPermit_JX 江西
+TR_MedicalDeviceManagementPermit_HN 河南
+北京--
+广东--
+河北
+江苏TR_MedicalDeviceManagementLicence_JiangSu
+
+山东
+山西
+陕西--TR_MedicalDeviceCompanyInfo_SX
+上海--TR_MedicalDeviceManagementLicence_SH
+天津--TR_MedicalDevice_TJ_QXJYXK_三类            TR_MedicalDeviceMainInfo_TJ_WLXSBABG_New

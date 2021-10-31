@@ -1,0 +1,68 @@
+
+create table TR_CompanyInfo(
+	int_ID int identity(1,1) primary key,
+	ComanyID nvarchar(20), --公司ID
+	CompanyName nvarchar(50),--公司名称 
+	Leader nvarchar(50),--负责人
+	Lawer nvarchar(50), --企业法人
+	USCCID nvarchar(50),--统一社会信用代码 
+	CertNO nvarchar(50), --经营许可证号
+	BeginDate date, --经营许可日期
+	EndDate date, --经营许可截止日期
+	BusinessType nvarchar(20),--经营方式（批发，零售）
+	ComType nvarchar(20), --企业类型（一类，二类，三类）
+	RegistAddr nvarchar(200), -- 公司注册地址
+	WareAddr nvarchar(300), --公司仓库地址
+	AbodeAddr nvarchar(200),--住所地址
+	X nvarchar(50), --经度
+	Y nvarchar(50),  --纬度 
+	BelongOrgan nvarchar(50),--所属监管机构
+	AreaCode nvarchar(20),--国家地址区位码
+	LatelyTime datetime, --最近更新时间
+	OpUser nvarchar(30), --操作人
+	Property01 nvarchar(50),
+	Property02 nvarchar(50),
+	Property03 nvarchar(50),
+	Property04 nvarchar(50),
+	Property05 nvarchar(50),
+	Property06 nvarchar(50),
+	Property07 nvarchar(50),
+	Property08 nvarchar(50),
+	Property09 nvarchar(50),
+	Property10 nvarchar(50)
+)
+
+--企业经营类目
+create table TR_Company_BusinessRange(
+	int_ID int identity(1,1) primary key,
+	CompanyID nvarchar(20), --公司代码
+	VersionInfo nvarchar(20), --版本2002，2017
+	Code nvarchar(20), -- 编码
+	Name nvarchar(50), -- 名称
+	AllowState nvarchar(20) -- 允许经营状态，允许，不允许 
+)
+
+--企业注册证信息
+create table TR_Company_Licese(
+	int_ID int identity(1,1) primary key,
+	RegistID nvarchar(20), --注册证ID
+	CompanyID nvarchar(20),--公司ID
+	LiceseNO nvarchar(50),--产品注册证号
+	ProductName nvarchar(50), --产品名称
+	CatelogyType nvarchar(20),--产品管理类别：一类，二类，三类
+	C1Code nvarchar(20), --一级类目
+	C2Code nvarchar(20), --二级类目
+	C3Code nvarchar(20), --三级类目
+	BeginDate date, --许可效期
+	EndDate date, --截止日期
+	Remark nvarchar(200)
+)
+--规格表
+create table TR_Company_LiceseProduct
+(
+	int_ID int identity(1,1) primary key,
+	RegistID nvarchar(20),--注册证ID
+	Spec nvarchar(50),--规格
+	Model nvarchar(50),--型号
+	MainCode nvarchar(50), --高值主码
+)
